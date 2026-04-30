@@ -2,7 +2,7 @@
 
 Paperly AI is an advanced AI-powered document creation platform that helps users generate professional research papers, business proposals, resumes, reports, presentations, and LaTeX documents in minutes. It transforms simple ideas into polished **PDF**, **DOCX**, and **PPTX** files with smart writing assistance, grammar correction, humanized content, charts, formulas, and modern formatting. Built for students, researchers, startups, and professionals, Paperly AI makes document creation faster, easier, and more intelligent.
 
-**Demo:** _Add your demo URL_ — replace with `[[Watch Demo](https://your-demo-url)](https://www.loom.com/share/277c565748704159b78e7dcdaf155239)` when available.
+`(https://www.loom.com/share/277c565748704159b78e7dcdaf155239)` when available.
 
 ## Features
 
