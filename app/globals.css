@@ -1,8 +1,12 @@
 @import "tailwindcss";
+@import "katex/dist/katex.min.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  /* Recharts / accents */
+  --paperly-chart-bar: #0f172a;
+  --paperly-chart-grid: rgb(226 232 240);
 }
 
 @theme inline {
@@ -14,13 +18,107 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #020617;
+    --foreground: #e2e8f0;
+    --paperly-chart-bar: #a5b4fc;
+    --paperly-chart-grid: rgb(51 65 85 / 0.45);
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+html.dark {
+  --background: #020617;
+  /* Slightly brighter than slate-200 on slate-950 for small UI copy */
+  --foreground: #e2e8f0;
+  --paperly-chart-bar: #a5b4fc;
+  --paperly-chart-grid: rgb(51 65 85 / 0.45);
+}
+
+.paperly-typing-wrap.is-typing-stream .ProseMirror::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  margin-left: 1px;
+  vertical-align: text-bottom;
+  background: var(--paperly-accent, #4f46e5);
+  animation: paperly-typing-caret 0.85s step-end infinite;
+}
+
+@keyframes paperly-typing-caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+html.dark .paperly-typing-wrap.is-typing-stream .ProseMirror::after {
+  background: #a5b4fc;
+}
+
+.paperly-editor h1 {
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+  font-size: var(--paperly-h1-size, 2rem);
+  font-weight: var(--paperly-heading-weight, 700);
+  color: var(--paperly-heading-color, var(--paperly-accent, #0f172a));
+  font-family: var(--paperly-heading-font, var(--font-geist-sans)), Arial, sans-serif;
+}
+
+.paperly-editor h2 {
+  font-size: var(--paperly-h2-size, 1.45rem);
+  line-height: 1.25;
+  margin: 1.2rem 0 0.6rem;
+  font-weight: var(--paperly-heading-weight, 600);
+  color: var(--paperly-heading-color, var(--paperly-accent, #0f172a));
+  font-family: var(--paperly-heading-font, var(--font-geist-sans)), Arial, sans-serif;
+}
+
+.paperly-editor p {
+  margin: 0.45rem 0;
+  white-space: pre-wrap;
+  font-weight: var(--paperly-body-weight, 400);
+  color: var(--paperly-body-color, inherit);
+}
+
+.paperly-editor ul,
+.paperly-editor ol {
+  margin: 0.5rem 0 0.7rem 1.2rem;
+}
+
+.paperly-editor li {
+  margin: 0.2rem 0;
+}
+
+.paperly-editor img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 0.45rem;
+}
+
+.paperly-editor figure {
+  margin: 0.7rem 0;
+}
+
+.paperly-editor figcaption {
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.paperly-editor p.paperly-page-break {
+  margin: 2.5rem 0 1.5rem;
+  padding-top: 1.75rem;
+  border-top: 2px dashed rgb(148 163 184 / 0.9);
+  break-before: page;
+  page-break-before: always;
+  min-height: 1px;
+}
+
+html.dark .paperly-editor p.paperly-page-break {
+  border-top-color: rgb(71 85 105 / 0.9);
 }

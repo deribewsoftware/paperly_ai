@@ -1,0 +1,26 @@
+[
+  {
+    "prompt": "Create a startup proposal for a restaurant delivery company in Addis Ababa.",
+    "expectedDocType": "proposal"
+  },
+  {
+    "prompt": "Write a 15-page research paper on financial planning in SMEs.",
+    "expectedDocType": "research-paper"
+  },
+  {
+    "prompt": "Generate a professional CV for a senior software engineer.",
+    "expectedDocType": "resume-cv"
+  },
+  {
+    "prompt": "Summarize team meeting notes and action items for this week.",
+    "expectedDocType": "meeting-notes"
+  },
+  {
+    "prompt": "Build a quarterly marketing plan for a coffee export brand.",
+    "expectedDocType": "marketing-plan"
+  },
+  {
+    "prompt": "Draft a basic contract letter for freelance design work.",
+    "expectedDocType": "contract-letter"
+  }
+]
